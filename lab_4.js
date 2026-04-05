@@ -24,6 +24,26 @@ class BiDirectionalPriorityQueue {
     return this.items.length;
   }
 
+  peek(type) {
+    const index = this.findIndex(type)
+
+    if (index === -1) {
+        return null
+    }
+
+    return this.items[index]
+  }
+
+  dequeue(type) {
+    const index = this.findIndex(type)
+
+    if (index === -1) {
+        return null
+    }
+
+    return this.items.splice(index, 1)[0]
+  }
+
   findIndex(type) {
     if (this.items.length === 0) {
         return -1
