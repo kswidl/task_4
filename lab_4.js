@@ -98,7 +98,17 @@ queue.enqueue("Task B", 5)
 queue.enqueue("Task C", 1)
 queue.enqueue("Task D", 5)
 
-console.log("Queue size:", queue.size())
-console.log("Highest priority:", queue.peek("highest"))
-console.log("Lowest priority:", queue.peek("lowest"))
-console.log("Oldest item:", queue.peek("oldest"))
+console.log("Initial queue size:", queue.size())
+
+console.log("Peek highest:", queue.peek("highest"))
+console.log("Peek lowest:", queue.peek("lowest"))
+console.log("Peek oldest:", queue.peek("oldest"))
+console.log("Peek newest:", queue.peek("newest"))
+
+console.log("Dequeue highest:", queue.dequeue("highest"))
+console.log("Dequeue lowest:", queue.dequeue("lowest"))
+console.log("Dequeue oldest:", queue.dequeue("oldest"))
+console.log("Dequeue newest:", queue.dequeue("newest"))
+
+console.log("Queue is empty:", queue.isEmpty())
+console.log("Final queue size:", queue.size())
