@@ -90,3 +90,15 @@ class BiDirectionalPriorityQueue {
     return targetIndex
   }
 }
+
+const queue = new BiDirectionalPriorityQueue()
+
+queue.enqueue("Task A", 2)
+queue.enqueue("Task B", 5)
+queue.enqueue("Task C", 1)
+queue.enqueue("Task D", 5)
+
+console.log("Queue size:", queue.size())
+console.log("Highest priority:", queue.peek("highest"))
+console.log("Lowest priority:", queue.peek("lowest"))
+console.log("Oldest item:", queue.peek("oldest"))
